@@ -6,8 +6,13 @@ import java.util.*;
 
 
 
-public class FindingList {     
+public class FindingList { 
+
     public static void main(String[] args) {
+        findingList();
+      }
+  
+    public static void findingList(){
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {

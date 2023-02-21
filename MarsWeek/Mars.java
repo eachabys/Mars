@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import GuessingGame.java;
 
 public class Mars{
 
@@ -23,12 +22,22 @@ public class Mars{
         else {
             System.out.println("ERROR!!! Flight plan already set. Landing on the Plain");
              }
-        scan.close();
+        
   
         landing=landingCheck(10);
         System.out.println(landing);
-        //GuessingGame.mainM();
 
+        //Scanner scan= new Scanner(System.in);
+        System.out.println("Hello! What's your name?");
+        String userName=scan.nextLine();
+        
+
+        GuessingGame.guessingGame(userName);
+        MarsExpedition.marsExpedition(userName);
+        scan.close();
+        FindingList.findingList();
+        
+        //add finding list and marsexpediton
 
     }
 

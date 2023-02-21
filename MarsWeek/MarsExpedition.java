@@ -3,13 +3,17 @@ import java.util.Scanner;
 public class MarsExpedition {
     
     public static void main(String[] args) {
-        Scanner scan= new Scanner(System.in);
-        System.out.println("Hello! What's your name?");
-        String userName=scan.nextLine();
+      marsExpedition();
+    }
+
+    public static void marsExpedition(String userName){
+        Scanner scan1= new Scanner(System.in);
+        //System.out.println("Hello! What's your name?");
+        //String userName=scan.nextLine();
         System.out.println("Welcome aboard "+userName+".Expedition prep program starting.");
         System.out.println("Booting up...");
         System.out.println(userName+"!Are you ready to head out into the new world? Type Y or N");
-        String ready=scan.nextLine();
+        String ready=scan1.nextLine();
         System.out.println(ready);
         if (ready.equals("Y")||ready.equals("y")){
             System.out.println("I knew you would say that. You are team leader for a reason.");
@@ -19,7 +23,7 @@ public class MarsExpedition {
         }
         System.out.println("How many extra team members would you like in your mission? Please enter a number");
        
-        int team=scan.nextInt();
+        int team=scan1.nextInt();
         if (team<0||team>2){
             System.out.println("We can only send 2 more members.");
             team=2;
@@ -49,7 +53,7 @@ public class MarsExpedition {
           }
 
         System.out.println(userName+ " you are set for the mission. Good luck with your team of " +team+". You will be provided with "+snack+" and "+vehicleType +".");
-        scan.close();
+        scan1.close();
         scanN.close();
     }
 }

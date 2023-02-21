@@ -2,11 +2,14 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class GuessingGame {     
-    public static void mainM(String[] args) {
-        Scanner scan= new Scanner(System.in);
-        System.out.println("Hello! What's your name?");
-        String userName=scan.nextLine();
-        scan.close();
+    public static void main(String[] args) {
+        guessingGame();
+    }
+    public static void guessingGame(String userName){
+        //Scanner scan= new Scanner(System.in);
+        //System.out.println("Hello! What's your name?");
+        //String userName=scan.nextLine();
+        
         
         // create an instance of the Random object
         Random rand = new Random();
@@ -15,6 +18,7 @@ public class GuessingGame {
         int number = rand.nextInt(100);
         System.out.println(userName+ ", I'm thinking of a number between 1 and 100. Try to guess my number.");
         int guess=checknumber(userName,number, 1, 100);
+        
     }
     public static int guessnumber(int start,int end) {
         Random rand = new Random();
